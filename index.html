@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSS 프로젝트 메인 페이지</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border-color: #667eea;
+            background: #fff;
+        }
+        
+        .nav-card h3 {
+            margin: 0 0 10px 0;
+            color: #667eea;
+            font-size: 1.3em;
+        }
+        
+        .nav-card p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OSS_assignment 2</h1>
+        
+        <div class="nav-grid">
+            <a href="form.html" class="nav-card">
+                <span class="icon">🛒</span>
+                <h3>form.html</h3>
+                <p>JavaScript 기능으로 텍스트 추가, 삭제 기능</p>
+            </a>
+            
+            <a href="form_js.html" class="nav-card">
+                <span class="icon">⚡</span>
+                <h3>form_js.html</h3>
+                <p>Js를 활용한 checkout form 페이지</p>
+            </a>
+            
+            <a href="form_style.html" class="nav-card">
+                <span class="icon">🎨</span>
+                <h3>스타일링된 폼</h3>
+                <p>CSS적용한 checkout form 페이지</p>
+            </a>
+            
+            <a href="form_nostyle.html" class="nav-card">
+                <span class="icon">📝</span>
+                <h3>기본 HTML 폼</h3>
+                <p>순수 HTML로만 구성된 checkout form 페이지</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
