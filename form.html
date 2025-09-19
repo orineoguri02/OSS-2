@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Web page</title>
+  </head>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: white;
+      justify-items: center;
+    }
+  </style>
+  <body>
+    <h1>Dynamic Web page</h1>
+    <div>
+      <input type="text" id="input_text" name="input_text" />
+      <button
+        type="button"
+        id="add_btn"
+        value="추가"
+        style="background-color: blue; color: white"
+      >
+        추가
+      </button>
+      <button
+        type="button"
+        id="delete_btn"
+        value="삭제"
+        style="background-color: mediumspringgreen"
+      >
+        삭제
+      </button>
+    </div>
+    <ul id="text_list"></ul>
+
+    <script>
+      // window.onload 사용
+      window.onload = function() {
+        initializeEventListeners();
+      };
+
+      function initializeEventListeners() {
+        const inputText = document.getElementById('input_text');
+        const addBtn = document.getElementById('add_btn');
+        const deleteBtn = document.getElementById('delete_btn');
+        const textList = document.getElementById('text_list');
+
+        addBtn.addEventListener('click', function() {
+          const text = inputText.value.trim();
+          if (text !== '') {
+            const listItem = document.createElement('li');
+            listItem.textContent = text;
+            textList.appendChild(listItem);
+            inputText.value = ''; // 입력 필드 초기화
+          }
+        });
+
+        deleteBtn.addEventListener('click', function() {
+          textList.innerHTML = '';
+        });
+      }
+    </script>
+  </body>
+</html>

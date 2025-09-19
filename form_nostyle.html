@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>nostyle</title>
+  </head>
+  <body>
+    <header>
+      <h1>Checkout form</h1>
+      <p>
+        Below is an example form built entirely with plain HTML form controls.
+        Each required form group can be validated when submitting without
+        completing it.
+      </p>
+    </header>
+    <form>
+      <h2>Billing address</h2>
+
+      <label for="first_name">First name</label><br />
+      <input type="text" name="first_name" id="first_name" /><br /><br />
+
+      <label for="last_name">Last name</label><br />
+      <input type="text" name="last_name" id="last_name" /><br /><br />
+
+      <label for="username">Username</label><br />
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="@username"
+      /><br /><br />
+
+      <label for="email">Email (Optional)</label><br />
+      <input
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+        id="email"
+      /><br /><br />
+
+      <label for="address">Address</label><br />
+      <input
+        type="text"
+        name="address"
+        placeholder="1234 Main St"
+        id="address"
+      /><br /><br />
+
+      <label for="address2">Address 2 (Optional)</label><br />
+      <input
+        type="text"
+        name="address2"
+        id="address2"
+        placeholder="Apartment or suite"
+      /><br /><br />
+
+      <label id="country">Country</label><br />
+      <select name="country" id="country">
+        <option>Choose...</option>
+        <option>Korea</option>
+        <option>USA</option></select
+      ><br /><br />
+
+      <label for="state">State</label><br />
+      <select name="state" id="state">
+        <option>Choose...</option>
+        <option>Seoul</option>
+        <option>Busan</option></select
+      ><br /><br />
+
+      <label for="zip">Zip</label><br />
+      <input type="text" name="zip" id="zip" /><br /><br />
+
+      <input type="checkbox" name="same_address" id="same_address" /> Shipping
+      address is the same as my billing address<br />
+      <input type="checkbox" name="save_info" id="save_info" /> Save this
+      information for next time<br /><br />
+
+      <h2>Payment</h2>
+      <input type="radio" name="payment" value="credit" id="radio1" /> Credit
+      card<br />
+      <input type="radio" name="payment" value="debit" id="radio2" /> Debit
+      card<br />
+      <input type="radio" name="payment" value="paypal" id="radio3" />
+      PayPal<br /><br />
+
+      <label for="ard_name">Name on card</label><br />
+      <input
+        type="text"
+        name="card_name"
+        id="ard_name"
+        placeholder="Full name
+      as displayed on card"
+      /><br /><br />
+
+      <label for="card_number">Credit card number</label><br />
+      <input type="text" name="card_number" /><br /><br />
+
+      <label for="expiration">Expiration</label><br />
+      <input type="text" name="expiration" /><br /><br />
+
+      <label for="cvv">CVV</label><br />
+      <input type="text" name="cvv" /><br /><br />
+
+      <button type="submit" id="submit">Continue to checkout</button>
+    </form>
+
+    <hr />
+
+    <h2>Your cart</h2>
+    <p>Product name - $12</p>
+    <p>Second product - $8</p>
+    <p>Third item - $5</p>
+    <p>Promo code (EXAMPLECODE) - -$5</p>
+    <p><strong>Total: $20</strong></p>
+
+    <label for="promo_code">Promo code</label><br />
+    <input type="text" name="promo_code" />
+    <button type="button">Redeem</button>
+    <div>
+      <label id="input_type_date">배송일자</label> <br />
+      <input type="date" id="input_type_date" name="date" />
+    </div>
+
+    <hr />
+    <p>© 2017–2022 Company Name</p>
+    <a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Support</a>
+  </body>
+</html>

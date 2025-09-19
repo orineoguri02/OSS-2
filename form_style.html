@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Checkout form</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: white;
+        line-height: 1.5;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .content {
+        display: flex;
+        gap: 30px;
+        align-items: stretch;
+      }
+      .form-group-half {
+        flex: 1;
+      }
+      label {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="date"],
+      input[type="number"] {
+        width: 100%;
+        height: 35px;
+        border: 1px solid #ced4da;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+      }
+
+      main {
+        flex: 2;
+        padding: 30px;
+        border-radius: 8px;
+      }
+
+      aside {
+        flex: 1;
+        max-width: 350px;
+        padding: 30px;
+        border-radius: 8px;
+        height: fit-content;
+      }
+
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+      }
+
+      .form-row {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        flex: 1;
+        margin-bottom: 20px;
+      }
+      .fonm-check {
+        margin-right: 8px;
+        margin-top: 2px;
+      }
+      .cart-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        border-bottom: 1px solid gray;
+
+      }
+
+      .cart-item-info .text-muted {
+        font-size: 1rem;
+        color: #6c757d;
+        margin: 0;
+      }
+
+      .cart-item-price {
+        font-size: 0.9rem;
+        color: #212529;
+      }
+      .cart-item-info h6 {
+        margin: 0 0 5px 0;
+        font-size: 1rem;
+        color: #212529;
+      }
+
+      .cart-item-price {
+        font-size: 1rem;
+        color: gray;
+      }
+
+      .promo-form {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .promo-form input {
+        flex: 1;
+      }
+
+      .cart-card {
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      .cart-badge {
+        background-color: #0d6efd;
+        color: white;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .total-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 1px solid #dee2e6;
+        margin-top: 15px;
+        font-size: 1.1rem;
+      }
+
+      .promo-form {
+        margin-top: 20px;
+      }
+
+      .promo-form input {
+        padding: 8px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 16px 0 0 16px;
+        border-right: none;
+      }
+
+      .promo-form button {
+        padding: 8px 16px;
+        background-color: #6c757d;
+        color: white;
+        border: 1px solid #6c757d;
+        border-radius: 0 16px 16px 0;
+        cursor: pointer;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Checkout form</h1>
+        <p>
+          Below is an example form built entirely with Bootstrap’s form
+          controls. Each required form group has a <br />validation state that
+          can be triggered by attempting to submit the form without completing
+          it.
+        </p>
+      </header>
+
+      <div class="content">
+        <main>
+          <form>
+            <h2 style="margin: 0; margin-bottom: 20px;">Billing address</h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first_name">First name</label> <br />
+                <input type="text" name="first_name" id="first_name" />
+              </div>
+
+              <div class="form-group">
+                <label for="last_name">Last name</label> <br />
+                <input type="text" name="last_name" id="last_name" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username">Username</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Username"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email (Optional)</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                id="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                name="address"
+                placeholder="1234 Main St"
+                id="address"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="address2">Address 2 (Optional)</label>
+              <input
+                type="text"
+                name="address2"
+                id="address2"
+                placeholder="Apartment or suite"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group-half">
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                  <option>Choose...</option>
+                  <option>Korea</option>
+                  <option>USA</option>
+                </select>
+              </div>
+
+              <div class="form-group-half">
+                <label for="state">State</label>
+                <select name="state" id="state">
+                  <option>Choose...</option>
+                  <option>Seoul</option>
+                  <option>Busan</option>
+                </select>
+              </div>
+
+              <div class="form-group-half">
+                <label for="zip">Zip</label>
+                <input type="text" name="zip" id="zip" />
+              </div>
+            </div>
+            <hr />
+
+            <div>
+              <input type="checkbox" name="same_address" id="same_address" />
+              <label for="same_address">
+                Shipping address is the same as my billing address
+              </label>
+            </div>
+
+            <div>
+              <input type="checkbox" name="save_info" id="save_info" />
+              <label for="save_info">
+                Save this information for next time
+              </label>
+            </div>
+
+            <hr />
+
+            <h2>Payment</h2>
+            <input
+              type="radio"
+              name="payment"
+              value="credit"
+              id="radio1"
+              checked
+            />
+            Credit card<br />
+            <input type="radio" name="payment" value="debit" id="radio2" />
+            Debit card<br />
+            <input type="radio" name="payment" value="paypal" id="radio3" />
+            PayPal<br /><br />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="card_name">Name on card</label>
+                <input type="text" name="card_name" id="card_name" />
+                <small class="text-muted">Full name as displayed on card</small>
+              </div>
+
+              <div class="form-group">
+                <label for="card_number">Credit card number</label>
+                <input type="text" name="card_number" id="card_number" />
+              </div>
+            </div>
+
+            <div class="form-row"">
+              <div class="form-group-half">
+                <label for="expiration">Expiration</label>
+                <input type="text" name="expiration" id="expiration" />
+              </div>
+
+              <div class="form-group-half">
+                <label for="cvv">CVV</label>
+                <input type="text" name="cvv" id="cvv" />
+              </div>
+            </div>
+            <hr / style="margin:30px;">
+            <button
+              type="submit"
+              class="btn"
+              id="submit"
+              style="
+                background-color: #0d6efd;
+                color: white;
+                width: 100%;
+                height: 48px;
+                border-radius: 8px;
+                font-size: 1rem;
+                font-weight: 400;
+                text-align: center;
+                border: 1px solid transparent;
+                cursor: pointer;
+
+              "
+            >
+              Continue to checkout
+            </button>
+          </form>
+        </main>
+
+        <aside>
+          <div class="cart-card">
+            <div class="cart-header">
+              <h2 style="margin: 0; margin-right: 177px; color: #0d6efd;">Your cart</h2>
+              <span class="cart-badge">3</span>
+            </div>
+
+            <div class="cart-item">
+              <div class="cart-item-info">
+                <h6>Product name</h6>
+                <p class="text-muted">Brief description</p>
+              </div>
+              <span class="cart-item-price">$12</span>
+            </div>
+
+            <div class="cart-item">
+              <div class="cart-item-info">
+                <h6>Second product</h6>
+                <p class="text-muted">Brief description</p>
+              </div>
+              <span class="cart-item-price">$8</span>
+            </div>
+
+            <div class="cart-item">
+              <div class="cart-item-info">
+                <h6>Third item</h6>
+                <p class="text-muted">Brief description</p>
+              </div>
+              <span class="cart-item-price">$5</span>
+            </div>
+
+            <div class="cart-item promo-code">
+              <div class="cart-item-info">
+                <h6 style="color: #198754;">Promo code</h6>
+                <p class="text-muted" style="color: #198754;">EXAMPLECODE</p>
+              </div>
+              <span class="cart-item-price" style="color: #198754;">−$5</span>
+            </div>
+
+            <div class="total-row">
+              <span>Total (USD)</span>
+              <strong>$20</strong>
+            </div>
+
+            <div class="promo-form">
+              <input type="text" placeholder="Promo code" name="promo_code" />
+              <button type="button" class="btn btn-outline-secondary">
+                Redeem
+              </button>
+            </div>
+
+            <div style="margin-top: 20px;">
+              <label for="input_type_date">Delivery date</label> <br />
+              <input type="date" id="input_type_date" name="date" />
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2017–2022 Company Name</p>
+      <a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Support</a>
+    </footer>
+  </body>
+</html>
